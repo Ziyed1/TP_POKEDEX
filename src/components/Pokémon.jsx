@@ -17,21 +17,22 @@ function Pokémon(props) {
 
   return (
     <div>
-      <p>
         {filteredData.map((pokemon) => {
-           return <>
-                    <div className={pokemon.type[0]}><br/>{pokemon.name[props.language]} <br/> Type : {pokemon.type}</div>
-                    <ul>
-                      <li>Point de vie : {pokemon.base['HP']}</li>
-                      <li>Attaque : {pokemon.base['Attack']}</li>
-                      <li>Défense : {pokemon.base['Defense']}</li>
-                      <li>Attaque spéciale : {pokemon.base['Sp. Attack']}</li>
-                      <li>Défense spéciale : {pokemon.base['Sp. Defense']}</li>
-                      <li>Rapidité : {pokemon.base['Speed']}</li>
-                    </ul>
-                </>
+           return <div className='card-container'>
+                    <div className={` card ${pokemon.type[0]}`}>
+                      <p className='card-title'>{pokemon.name[props.language]}</p>
+                      <p className='card-type'>Type: {pokemon.type}</p>
+                      <ul>
+                        <li className='hp'>Point de vie : {pokemon.base['HP']}</li>
+                        <li className='attack'>Attaque : {pokemon.base['Attack']}</li>
+                        <li className='defense'>Défense : {pokemon.base['Defense']}</li>
+                        <li className='sp-attack'>Attaque spéciale : {pokemon.base['Sp. Attack']}</li>
+                        <li className='sp-defense'>Défense spéciale : {pokemon.base['Sp. Defense']}</li>
+                        <li className='speed'>Rapidité : {pokemon.base['Speed']}</li>
+                      </ul>
+                    </div>
+                </div>
         })}
-      </p>
       </div>
   );
 }
