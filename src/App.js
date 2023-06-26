@@ -1,24 +1,25 @@
 import logo from './logo.svg';
 import './App.css';
+import Pokémon from './components/Pokémon';
+import Navbar from './components/Navbar'
+import data from './json/pokedex.json'
 
 function App() {
+  
+
+  const handleSearch = searchTerm => {
+    const searchPokemon = data.filter(pokemon =>
+      pokemon.name['french'].toLowerCase().includes(searchTerm.toLowerCase())
+    );
+    console.log('Recherche du Pokémon :', searchTerm);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Navbar onSearch={handleSearch}/>
+      <Pokémon></Pokémon>
+    </>
+      
   );
 }
 

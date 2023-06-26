@@ -1,0 +1,52 @@
+.Electric {
+    color: rgb(241, 241, 53);
+  }
+  
+.Fire {
+    color: red;
+}
+.Water {
+    color: blue;
+}
+.Normal {
+    color: gray;
+}
+.Grass {
+    color: green;
+}
+.Poison {
+    color: purple;
+}
+.Fairy {
+    color: pink;
+}
+.Bug {
+    color: #918518;
+}
+.GrassPoison {
+    color: green;
+}
+.Ground {
+    color: brown;
+}
+.Psychic {
+    color: blueviolet;
+}
+.Rock {
+    color: rgb(105, 26, 26);
+}
+.Ghost {
+    color: rgb(65, 1, 65);
+}
+.Ice {
+    color: turquoise;
+}
+.Steel {
+    color: grey;
+}
+.Dark {
+    color: black;
+}
+.Fighting {
+    color: rgb(78, 2, 2);
+}
